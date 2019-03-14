@@ -98,6 +98,7 @@ self.addEventListener('notificationclick', event => {
         case 'setting-action':
             console.log("User 's setting.");
             postMessage('setting-action');
+            clickedNotification.close();
             break;
         default:
             console.log(`Unknown action clicked: '${event.action}'`);
